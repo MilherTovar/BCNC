@@ -1,0 +1,3 @@
+### Buscar precios
+GET http://localhost:8080/api/precio/busquedaPrecios?fechaAplicacion=2020-06-16T00:00:00Z&cadenaId=1&productoId=35455
+Accept: application/json
