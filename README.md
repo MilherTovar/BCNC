@@ -56,6 +56,20 @@ application.properties.
 
 ## QUE SE INCLUYE
 
+Requisitos y ejecución: Java 21, versión de Maven usada y mvn spring-boot:run.
+Base de datos: consola H2, URL JDBC jdbc:h2:mem:testdb, usuario sa, contraseña y carga de datos.
+Uso del endpoint: GET /api/precio/busquedaPrecios, sus tres parámetros, ejemplo de petición y respuestas 200 y 204.
+Pruebas: mvn test; para Cypress, primero levantar la aplicación y luego ejecutar npx cypress run. El package.json no define un script de Cypress y su npm test actual falla deliberadamente.
+Arquitectura: En la capa de adpatador esta el in y el out, con respecto al in se presenta la entrada por medio de una petición Http y por medio de una entrada por boostrap
+el adaptador de salida corresponde a la persistencia (entidades, mappers e interface de springdata).
+
+Con respecto a application, esta los puertos de entrada y el servicio, con respecto a los puertos de entrada y de salida, están las interfaces a las diferentes capas, hacia la web y hacia
+la base de datos sin saber lo que esta dentro de esas capas, y con respecto al servicio centra la l{ogica de negocio
+
+La capa de domain representa los modelos usados en la infraestructura
+
+Lo que se incluye es: 
+
 - Contratos Http en OpenApiFirst
 - Codigo completo: Arquitectura Hexagonal
 - Pruebas Unitarias (En estas se hacen la del controllador, implementación de casos de uso y de infraestructura)
