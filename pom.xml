@@ -96,7 +96,7 @@
                         <inputSpec>${project.basedir}/src/main/resources/prueba-api.yml</inputSpec>
                         <generatorName>spring</generatorName>
                         <apiPackage>bcnc.com.prueba.api</apiPackage>
-                        <modelPackage>bcnc.com.prueba.model</modelPackage>
+                        <modelPackage>bcnc.com.prueba.adapter.in.web.dto</modelPackage>
                         <supportingFilesToGenerate>ApiUtil.java</supportingFilesToGenerate>
                         <configOptions>
                             <delegatePattern>true</delegatePattern>
